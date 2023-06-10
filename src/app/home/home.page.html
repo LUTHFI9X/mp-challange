@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+        Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-input label="NAMA" labelPlacement="floating" [(ngModel)]="form.nama"></ion-input>
+    <br>
+    <ion-input label="NIM" labelPlacement="floating" type="number" [(ngModel)]="form.nim"></ion-input>
+    <br>
+    <ion-datetime-button datetime="date"></ion-datetime-button>
+    
+    
+    <ion-button color="success" (click)="sendToWhatssapp()">Direct Message To Whatsapp</ion-button>
+    <ion-button color="primary" (click)="sendToTelegram()">Direct Message To Telegram</ion-button>
+    <ion-button color="warning" (click)="sendToEmail()">Direct Message To Email</ion-button>
+  </div>
+</ion-content>
